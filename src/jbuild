@@ -1,0 +1,11 @@
+
+
+(jbuild_version 1)
+
+(executables
+ ((names (imandra_merlin))
+  (public_names (imandra_merlin))
+  (package imandra-merlin)
+  (modes (byte))
+  (libraries (compiler-libs.common merlin_extend ocaml-migrate-parsetree imandra.lib))
+  ))

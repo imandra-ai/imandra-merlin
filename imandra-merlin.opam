@@ -1,0 +1,19 @@
+opam-version: "1.2"
+name: "imandra-merlin"
+version: "0.1"
+author: "Simon Cruanes"
+maintainer: "simon@aestheticintegration.com"
+license: "MIT"
+build: [
+    ["jbuilder" "build" "@install" "-p" name]
+]
+depends: [
+  "jbuilder" {build}
+  "merlin-extend"
+  "ocaml-migrate-parsetree"
+  "imandra"
+]
+homepage: "https://github.com/aestheticintegration/imandra-merlin"
+bug-reports: "https://github.com/aestheticintegration/imandra-merlin/issues"
+dev-repo: "https://github.com/aestheticintegration/imandra-merlin.git"
+
