@@ -4,7 +4,7 @@
 
 (executables
  ((names (imandra_merlin))
-  (public_names (ocamlmerlin_imandra))
+  (public_names (ocamlmerlin-imandra))
   (package imandra-merlin)
   (modes (byte))
   (libraries (compiler-libs.common merlin_extend ocaml-migrate-parsetree imandra.lib))
