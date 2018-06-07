@@ -50,25 +50,7 @@ module Imandra_reader = struct
     | Pretty_toplevel_phrase x ->
       formatter#toplevel_phrase ppf (From_current.copy_toplevel_phrase x)
 
-  let print_outcome ppf =
-    let module P = Oprint in
-    function
-    | Out_value x ->
-      !P.out_value ppf (From_current.copy_out_value x)
-    | Out_type x ->
-      !P.out_type ppf (From_current.copy_out_type x)
-    | Out_class_type x ->
-      !P.out_class_type ppf (From_current.copy_out_class_type x)
-    | Out_module_type x ->
-      !P.out_module_type ppf (From_current.copy_out_module_type x)
-    | Out_sig_item x ->
-      !P.out_sig_item ppf (From_current.copy_out_sig_item x)
-    | Out_signature x ->
-      !P.out_signature ppf (List.map From_current.copy_out_sig_item x)
-    | Out_type_extension x ->
-      !P.out_type_extension ppf (From_current.copy_out_type_extension x)
-    | Out_phrase x ->
-      !P.out_phrase ppf (From_current.copy_out_phrase x)
+  let print_outcome = Extend_helper.print_outcome_using_oprint
 end
 
 
