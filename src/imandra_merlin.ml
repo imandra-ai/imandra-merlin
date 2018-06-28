@@ -9,8 +9,8 @@ module Imandra_reader = struct
 
   let load buffer = buffer
 
-  module To_current = OMP.Convert(OMP.OCaml_403)(OMP.OCaml_current)
-  module From_current = OMP.Convert(OMP.OCaml_current)(OMP.OCaml_403)
+  module To_current = OMP.Convert(OMP.OCaml_406)(OMP.OCaml_current)
+  module From_current = OMP.Convert(OMP.OCaml_current)(OMP.OCaml_406)
 
   let structure str =
     Structure (To_current.copy_structure str)
@@ -33,22 +33,22 @@ module Imandra_reader = struct
 
   let pretty_print ppf =
     let module P = Pprintast in
-    let formatter = P.default in
     function
     | Pretty_core_type x ->
-      formatter#core_type ppf (From_current.copy_core_type x)
+      P.core_type ppf (From_current.copy_core_type x)
     | Pretty_case_list x ->
-      formatter#case_list ppf (List.map From_current.copy_case x)
+      Format.fprintf ppf "<case-list>"
+(*       P.case_list ppf (List.map From_current.copy_case x) *)
     | Pretty_expression x ->
-      formatter#expression ppf (From_current.copy_expression x)
+      P.expression ppf (From_current.copy_expression x)
     | Pretty_pattern x ->
-      formatter#pattern ppf (From_current.copy_pattern x)
+      P.pattern ppf (From_current.copy_pattern x)
     | Pretty_signature x ->
-      formatter#signature ppf (From_current.copy_signature x)
+      P.signature ppf (From_current.copy_signature x)
     | Pretty_structure x ->
-      formatter#structure ppf (From_current.copy_structure x)
+      P.structure ppf (From_current.copy_structure x)
     | Pretty_toplevel_phrase x ->
-      formatter#toplevel_phrase ppf (From_current.copy_toplevel_phrase x)
+      P.toplevel_phrase ppf (From_current.copy_toplevel_phrase x)
 
   let print_outcome = Extend_helper.print_outcome_using_oprint
 end
