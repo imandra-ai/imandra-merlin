@@ -1,0 +1,4 @@
+FLG -w -40
+S .
+
+PKG imandra.syntax merlin_extend ocaml-migrate-parsetree
