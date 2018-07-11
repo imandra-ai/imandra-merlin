@@ -21,13 +21,17 @@ module Imandra_reader = struct
   let parse {text; path} =
     let buf = Lexing.from_string text in
     Location.init buf (Filename.basename path);
-    structure (Syn.implementation buf)
+    structure
+      (try Syn.implementation buf
+       with e -> Printf.printf "exn: %s\n" (Printexc.to_string e); [])
 
   let for_completion t _pos =  {complete_labels=true}, parse t
 
   let parse_line t pos line =
     let buf = Lexing.from_string line in
-    structure (Syn.implementation buf)
+    structure
+      (try Syn.implementation buf
+       with e -> Printf.printf "exn: %s\n" (Printexc.to_string e); [])
 
   let ident_at t _ = []
 
