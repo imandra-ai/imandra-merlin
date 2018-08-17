@@ -3,6 +3,8 @@ module Syn = Imandra_syntax.Syntax
 module OMP = Migrate_parsetree
 
 open Extend_protocol.Reader
+open Migrate_parsetree
+
 
 module Imandra_reader = struct
   type t = buffer
@@ -21,17 +23,13 @@ module Imandra_reader = struct
   let parse {text; path} =
     let buf = Lexing.from_string text in
     Location.init buf (Filename.basename path);
-    structure
-      (try Syn.implementation buf
-       with e -> Printf.printf "exn: %s\n" (Printexc.to_string e); [])
+    structure (Syn.implementation buf)
 
   let for_completion t _pos =  {complete_labels=true}, parse t
 
   let parse_line t pos line =
     let buf = Lexing.from_string line in
-    structure
-      (try Syn.implementation buf
-       with e -> Printf.printf "exn: %s\n" (Printexc.to_string e); [])
+    structure (Syn.implementation buf)
 
   let ident_at t _ = []
 
