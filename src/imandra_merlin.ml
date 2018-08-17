@@ -58,6 +58,7 @@ end
 
 
 let () =
+  Imandra_syntax.Imandra_parse.reify_errors := true;
   let open Extend_main in
   extension_main
     ~reader:(Reader.make_v0 (module Imandra_reader : V0))
