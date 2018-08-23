@@ -13,6 +13,6 @@ Add `FLG -reader imandra -open Imandra_prelude` to your `.merlin` file (or confi
 If trying to use `imandra-merlin` causes `merlin` to fail with `EOF exception`, you might need to:
 
 ```
-opam pin add https://github.com/bronsa/merlin.git\#merlin-extend
+opam pin add https://github.com/Aestheticintegration/merlin.git
 ln -s `which ocamlmerlin-imandra` /usr/local/bin
 ```
