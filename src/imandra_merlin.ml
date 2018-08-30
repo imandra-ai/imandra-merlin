@@ -7,6 +7,8 @@ open Migrate_parsetree
 open MenhirLib
 open Imandra_reason_parser
 
+let () = Imandra_reason_parser.Reason_config.recoverable := true
+
 module Imandra_reader = struct
   type t = buffer
 
