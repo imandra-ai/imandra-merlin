@@ -7,5 +7,5 @@
   (public_names (ocamlmerlin-imandra))
   (package imandra-merlin)
   (modes (byte))
-  (libraries (compiler-libs.common merlin_extend ocaml-migrate-parsetree imandra-base.syntax))
+  (libraries (compiler-libs.common merlin_extend ocaml-migrate-parsetree imandra-base.syntax imandra-reason-parser))
   ))
