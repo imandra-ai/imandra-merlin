@@ -10,14 +10,11 @@ open Imandra_reason_parser
 module Imandra_reader = struct
   type t = buffer
 
- let _ = Syn.set(Syn.Reason)
-
- let code = 
-  Syn.Raw.register_reason Imandra_reason_parser.Plugin.({Syn.Raw.
-      use_file; toplevel_phrase; implementation; report_exn;
-      });;
-
+  let _ = Syn.set(Syn.Reason)
  
+  let _ = Syn.Raw.register_reason Imandra_reason_parser.Plugin.({Syn.Raw.
+      use_file; toplevel_phrase; implementation; report_exn;
+      })
 
   let load buffer = buffer
 
