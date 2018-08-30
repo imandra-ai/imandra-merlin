@@ -11,9 +11,8 @@ depends: [
   "jbuilder" {build}
   "merlin-extend"
   "ocaml-migrate-parsetree"
-  "imandra"
+  "imandra-base"
 ]
 homepage: "https://github.com/aestheticintegration/imandra-merlin"
 bug-reports: "https://github.com/aestheticintegration/imandra-merlin/issues"
 dev-repo: "https://github.com/aestheticintegration/imandra-merlin.git"
-
