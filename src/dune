@@ -2,7 +2,7 @@
 
 (executable
  (name imandra_merlin_ocaml)
- (public_name ocamlmerlin-imandraOCaml)
+ (public_name ocamlmerlin-imandra)
  (modules imandra_merlin_ocaml)
  (package imandra-merlin)
  (modes byte)
@@ -12,7 +12,7 @@
 
 (executable
  (name imandra_merlin_reason)
- (public_name ocamlmerlin-imandraReason)
+ (public_name ocamlmerlin-imandra-reason)
  (modules imandra_merlin_reason)
  (package imandra-merlin)
  (modes byte)
