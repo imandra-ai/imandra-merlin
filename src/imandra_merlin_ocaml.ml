@@ -3,7 +3,6 @@ module Syn = Imandra_syntax.Syntax
 module OMP = Migrate_parsetree
 
 open Extend_protocol.Reader
-open Migrate_parsetree
 
 
 module Imandra_reader = struct

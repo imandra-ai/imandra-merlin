@@ -3,9 +3,6 @@ module Syn = Imandra_syntax.Syntax
 module OMP = Migrate_parsetree
 
 open Extend_protocol.Reader
-open Migrate_parsetree
-open MenhirLib
-open Imandra_reason_parser
 
 let () = Imandra_reason_parser.Reason_config.recoverable := true
 
