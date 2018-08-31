@@ -6,7 +6,11 @@ and Imandra's `Syntax` module.
 # Usage
 Install `imandra-merlin` using `opam pin add git@github.com:AestheticIntegration/imandra-merlin.git`
 
-Add `FLG -reader imandra -open Imandra_prelude` to your `.merlin` file (or configure your merlin extension to do the equivalent)
+For the OCaml extension, add `FLG -reader imandraOCaml -package imandra-base.prelude -open Imandra_prelude` to your `.merlin` file (or configure your merlin extension to do the equivalent).
+
+For the Reason extension add `FLG -reader imandraReason -package imandra-base.prelude -open Imandra_prelude` to your `.merlin` file (or configure your merlin extension to do the equivalent).
+
+
 
 # Troubleshoot
 

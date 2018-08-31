@@ -1,17 +1,18 @@
 opam-version: "1.2"
 name: "imandra-merlin"
-version: "0.1"
+version: "0.2"
 author: "Simon Cruanes"
 maintainer: "simon@aestheticintegration.com"
 license: "MIT"
 build: [
-    ["jbuilder" "build" "@install" "-p" name]
+    ["dune" "build" "@install" "-p" name]
 ]
 depends: [
-  "jbuilder" {build}
+  "dune" {build}
   "merlin-extend"
   "ocaml-migrate-parsetree"
   "imandra-base"
+  "imandra-reason-parser"
 ]
 homepage: "https://github.com/aestheticintegration/imandra-merlin"
 bug-reports: "https://github.com/aestheticintegration/imandra-merlin/issues"

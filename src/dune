@@ -1,0 +1,20 @@
+
+
+(executable
+ (name imandra_merlin_ocaml)
+ (public_name ocamlmerlin-imandraOCaml)
+ (modules imandra_merlin_ocaml)
+ (package imandra-merlin)
+ (modes byte)
+ (libraries compiler-libs.common merlin_extend ocaml-migrate-parsetree imandra-base.syntax)
+)
+
+
+(executable
+ (name imandra_merlin_reason)
+ (public_name ocamlmerlin-imandraReason)
+ (modules imandra_merlin_reason)
+ (package imandra-merlin)
+ (modes byte)
+ (libraries compiler-libs.common merlin_extend ocaml-migrate-parsetree imandra-base.syntax imandra-reason-parser)
+)
