@@ -3,6 +3,7 @@ name: "imandra-merlin"
 version: "0.2"
 author: "Simon Cruanes"
 maintainer: "simon@aestheticintegration.com"
+synopsis: "A reader using merlin-extend for Imandra's syntax"
 license: "MIT"
 build: [
     ["dune" "build" "@install" "-p" name]
