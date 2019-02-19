@@ -1,2 +1,4 @@
 _build
+.merlin
+*.install
 .imandra_init.log
