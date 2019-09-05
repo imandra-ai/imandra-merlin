@@ -6,7 +6,7 @@
  (modules imandra_merlin_ocaml)
  (package imandra-merlin)
  (modes byte)
- (libraries compiler-libs.common merlin_extend ocaml-migrate-parsetree imandra-base.syntax)
+ (libraries compiler-libs.common merlin-extend ocaml-migrate-parsetree imandra-base.syntax)
 )
 
 
@@ -16,5 +16,5 @@
  (modules imandra_merlin_reason)
  (package imandra-merlin)
  (modes byte)
- (libraries compiler-libs.common merlin_extend ocaml-migrate-parsetree imandra-base.syntax imandra-reason-parser)
+ (libraries compiler-libs.common merlin-extend ocaml-migrate-parsetree imandra-base.syntax imandra-reason-parser)
 )
