@@ -22,13 +22,13 @@ module Imandra_reader = struct
   let parse {text; path; _} =
     let buf = Lexing.from_string text in
     Location.init buf (Filename.basename path);
-    structure (Syn.implementation buf)
+    structure (Syn.implementation buf) 
 
   let for_completion t _pos =  {complete_labels=true}, parse t
 
   let parse_line _t _pos line =
     let buf = Lexing.from_string line in
-    structure (Syn.implementation buf)
+    structure (Syn.implementation buf) 
 
   let ident_at _t _ = []
 
@@ -39,7 +39,7 @@ module Imandra_reader = struct
       P.core_type ppf (From_current.copy_core_type x)
     | Pretty_case_list _x ->
       Format.fprintf ppf "<case-list>"
-(*       P.case_list ppf (List.map From_current.copy_case x) *)
+    (*       P.case_list ppf (List.map From_current.copy_case x) *)
     | Pretty_expression x ->
       P.expression ppf (From_current.copy_expression x)
     | Pretty_pattern x ->
